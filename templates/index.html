@@ -1,0 +1,165 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddy Disease Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Paddy Disease Classifier</h1>-->
+        
+        <!-- Instruction note --><!--
+        <p class="instructions">
+            ⚠ Note: Poor-quality images or images of other plants may lead to incorrect predictions, as the model is trained specifically on paddy diseases.
+        </p>-->
+        <!-- Image preview section -->
+         <!--
+        <div class="image-preview">
+            <img id="previewImage" src="#" alt="Image Preview" style="display:none; max-width:100%; height:auto;">
+        </div>
+        
+        <form id="uploadForm">
+            <input type="file" id="fileInput" accept="image/*">
+            <br>
+            <button type="submit">Upload & Predict</button>
+        </form>
+
+        <div class="result" id="result">
+            <h3>Prediction Result:</h3>
+            <pre id="output"></pre>
+        </div>
+    </div>
+
+    <script>
+        // Display a preview of the uploaded image
+        document.getElementById("fileInput").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const previewImage = document.getElementById("previewImage");
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = "block";
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Handle form submission for prediction
+        document.getElementById("uploadForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById("fileInput");
+
+            if (!fileInput.files.length) {
+                alert("Please select an image.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+
+            try {
+                const response = await fetch("/predict", {
+                    method: "POST",
+                    body: formData,
+                });
+
+                if (!response.ok) {
+                    throw new Error("Prediction failed.");
+                }
+
+                const result = await response.json();
+                document.getElementById("output").textContent = JSON.stringify(result, null, 2);
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Prediction failed.");
+            }
+        });
+    </script>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddy Disease Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Paddy Disease Classifier</h1>
+        
+        <!-- Instruction note -->
+        <p class="instructions">
+            <span class="note-icon">⚠ Note</span>: Poor-quality images or images of other plants may lead to incorrect predictions, as the model is trained specifically on paddy diseases.
+        </p>
+        
+        <!-- Image preview section -->
+        <div class="image-preview">
+            <img id="previewImage" src="#" alt="Image Preview" style="display:none; max-width:100%; height:auto;">
+        </div>
+        
+        <form id="uploadForm">
+            <input type="file" id="fileInput" accept="image/*">
+            <br>
+            <button type="submit">Upload & Predict</button>
+        </form>
+
+        <div class="result" id="result">
+            <h3>Prediction Result:</h3>
+            <pre id="output"></pre>
+        </div>
+    </div>
+
+    <script>
+        // Display a preview of the uploaded image
+        document.getElementById("fileInput").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const previewImage = document.getElementById("previewImage");
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = "block";
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Handle form submission for prediction
+        document.getElementById("uploadForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            const fileInput = document.getElementById("fileInput");
+
+            if (!fileInput.files.length) {
+                alert("Please select an image.");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+
+            try {
+                const response = await fetch("/predict", {
+                    method: "POST",
+                    body: formData,
+                });
+
+                if (!response.ok) {
+                    throw new Error("Prediction failed.");
+                }
+
+                const result = await response.json();
+                document.getElementById("output").textContent = JSON.stringify(result, null, 2);
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Prediction failed.");
+            }
+        });
+    </script>
+</body>
+</html>

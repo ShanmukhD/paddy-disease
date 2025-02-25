@@ -1,0 +1,172 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 350px;
+}
+
+h1 {
+    color: #333;
+}
+
+input[type="file"] {
+    margin: 15px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.result pre {
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+} */
+/* 
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 350px;
+}
+
+h1 {
+    color: #333;
+}
+
+.instructions {
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+input[type="file"] {
+    margin: 15px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.result pre {
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.image-preview {
+    margin-bottom: 15px;
+} */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 350px;
+}
+
+h1 {
+    color: #333;
+}
+
+.instructions {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.note-icon {
+    color: red;
+}
+
+input[type="file"] {
+    margin: 15px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.result pre {
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.image-preview {
+    margin-bottom: 15px;
+}
