@@ -46,8 +46,18 @@ index_to_disease = {
 st.title("🌾 Paddy Disease Classifier")
 st.write("Upload an image of a paddy leaf to classify its disease.")
 
-# Display instructions as HTML
+# Display instructions as HTML with custom styling
 st.markdown("""
+    <style>
+        .instructions {
+            font-size: 16px;
+            color: #FF5733;
+        }
+        .note-icon {
+            color: #FF5733;
+            font-weight: bold;
+        }
+    </style>
     <p class="instructions">
         <span class="note-icon">⚠ Note</span>: Poor-quality images or images of other plants may lead to incorrect predictions, 
         as the model is trained specifically on paddy diseases.
@@ -67,7 +77,7 @@ if uploaded_file is not None:
         outputs = model(**inputs)
         probabilities = torch.nn.functional.softmax(outputs.logits[0], dim=0).tolist()
 
-    # Show Results
+    # Show Prediction Results
     st.subheader("Prediction Results:")
     for i, disease in index_to_disease.items():
         st.write(f"**{disease}**: {round(probabilities[i], 4)}")
